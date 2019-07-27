@@ -464,7 +464,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y9d-sw-aQs">
-                                <rect key="frame" x="20" y="120" width="335" height="92"/>
+                                <rect key="frame" x="20" y="120" width="335" height="248"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    أسم المنتج" textAlignment="right" minimumFontSize="17" background="    التصنيف " translatesAutoresizingMaskIntoConstraints="NO" id="pn8-1C-5mh">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
@@ -475,8 +475,40 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31P-kx-zZP">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    التصنيف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-1H-T6g">
                                         <rect key="frame" x="0.0" y="52" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fsO-6x-4L8"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    السعر" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3K-JV-l4W">
+                                        <rect key="frame" x="0.0" y="104" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xMf-yL-H8k"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzN-3j-GdJ">
+                                        <rect key="frame" x="0.0" y="156" width="335" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="78t-8g-rGc"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة صورة المنتج">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="AddImageButton:" destination="3SL-OQ-Q2E" eventType="touchUpInside" id="SX3-61-VBl"/>
+                                            <action selector="addImageButton:" destination="XNi-eR-k7W" eventType="touchUpInside" id="9rD-Nw-MkP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31P-kx-zZP">
+                                        <rect key="frame" x="0.0" y="208" width="335" height="40"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qfp-xC-s9R"/>
@@ -502,9 +534,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="sBq-3h-tXV"/>
                     <connections>
-                        <outlet property="name" destination="pn8-1C-5mh" id="bys-CS-Bcs"/>
+                        <outlet property="category" destination="Y4R-1H-T6g" id="CLp-5f-WAt"/>
+                        <outlet property="image" destination="NzN-3j-GdJ" id="hA2-cg-Hqh"/>
+                        <outlet property="name" destination="pn8-1C-5mh" id="QvC-xT-K5I"/>
+                        <outlet property="price" destination="o3K-JV-l4W" id="XD8-gm-fap"/>
                         <outlet property="update" destination="31P-kx-zZP" id="zQW-ts-1rV"/>
-                        <outlet property="رشوث" destination="Y9d-sw-aQs" id="tV5-qN-LiT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7X-xK-tNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -518,10 +552,48 @@
                     <view key="view" contentMode="scaleToFill" id="2k1-0c-owv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fnt-FI-NHW">
+                                <rect key="frame" x="20" y="120" width="335" height="92"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    أسم المنتج" textAlignment="right" minimumFontSize="17" background="    التصنيف " translatesAutoresizingMaskIntoConstraints="NO" id="33u-Dd-KFT">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="EIO-bc-HlH"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-8X-16g">
+                                        <rect key="frame" x="0.0" y="52" width="335" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="b01-Kh-jue"/>
+                                        </constraints>
+                                        <state key="normal" title="حذف المنتج">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="AOB-ym-gMf" eventType="touchUpInside" id="avy-bl-7zs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.95433454949999996" green="0.95433454949999996" blue="0.95433454949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KPW-em-jUy" firstAttribute="trailing" secondItem="fnt-FI-NHW" secondAttribute="trailing" constant="20" id="W2T-ry-gg0"/>
+                            <constraint firstItem="fnt-FI-NHW" firstAttribute="leading" secondItem="KPW-em-jUy" secondAttribute="leading" constant="20" id="ifW-6l-pRc"/>
+                            <constraint firstItem="fnt-FI-NHW" firstAttribute="top" secondItem="KPW-em-jUy" secondAttribute="top" constant="100" id="pRk-Ha-opT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KPW-em-jUy"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uum-AK-Vl5"/>
+                    <connections>
+                        <outlet property="deleteItem" destination="1U8-8X-16g" id="rrv-UT-Hqe"/>
+                        <outlet property="name" destination="33u-Dd-KFT" id="EBq-vW-id8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aop-md-is9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

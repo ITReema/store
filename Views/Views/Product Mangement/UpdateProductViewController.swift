@@ -10,6 +10,9 @@ import UIKit
 
 class UpdateProductViewController: UIViewController {
     @IBOutlet var name: UITextField!
+    @IBOutlet var category: UITextField!
+    @IBOutlet var price: UITextField!
+    @IBOutlet var image: UIButton!
     @IBOutlet var update: UIButton!
     
     override func viewDidLoad() {
@@ -17,6 +20,9 @@ class UpdateProductViewController: UIViewController {
 
     }
 
+    @IBAction func addImageButton(_ sender: Any) {
+    }
+    
     @IBAction func updateButton(_ sender: Any) {
         
         

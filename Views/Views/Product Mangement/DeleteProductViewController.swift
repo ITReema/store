@@ -10,11 +10,15 @@ import UIKit
 
 class DeleteProductViewController: UIViewController {
 
+    @IBOutlet var name: UITextField!
+    @IBOutlet var deleteItem: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func deleteButton(_ sender: Any) {
+    }
+    
 }
