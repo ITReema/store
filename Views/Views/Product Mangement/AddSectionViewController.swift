@@ -10,6 +10,10 @@ import UIKit
 
 class AddSectionViewController: UIViewController {
 
+    @IBOutlet var name: UITextField!
+    @IBOutlet var image: UIButton!
+    @IBOutlet var addSection: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

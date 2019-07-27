@@ -462,7 +462,51 @@
                     <view key="view" contentMode="scaleToFill" id="plO-vU-T9x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y9d-sw-aQs">
+                                <rect key="frame" x="20" y="120" width="335" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    أسم المنتج" textAlignment="right" minimumFontSize="17" background="    التصنيف " translatesAutoresizingMaskIntoConstraints="NO" id="pn8-1C-5mh">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qhd-YD-ojt"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCg-uc-LPo">
+                                        <rect key="frame" x="0.0" y="52" width="335" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="A8M-X1-0n7"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة صورة">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31P-kx-zZP">
+                                        <rect key="frame" x="0.0" y="104" width="335" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qfp-xC-s9R"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة قسم جديد">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addProduct:" destination="3SL-OQ-Q2E" eventType="touchUpInside" id="1iG-cY-xMe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.95433454949999996" green="0.95433454949999996" blue="0.95433454949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uZz-T4-rxG" firstAttribute="trailing" secondItem="Y9d-sw-aQs" secondAttribute="trailing" constant="20" id="HRJ-mM-YYJ"/>
+                            <constraint firstItem="Y9d-sw-aQs" firstAttribute="leading" secondItem="uZz-T4-rxG" secondAttribute="leading" constant="20" id="bE3-7W-sVD"/>
+                            <constraint firstItem="Y9d-sw-aQs" firstAttribute="top" secondItem="uZz-T4-rxG" secondAttribute="top" constant="100" id="ph4-fg-729"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uZz-T4-rxG"/>
                     </view>
                     <navigationItem key="navigationItem" id="sBq-3h-tXV"/>
@@ -921,10 +965,59 @@
                     <view key="view" contentMode="scaleToFill" id="7um-Pd-Oo1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YGx-zk-Wgz">
+                                <rect key="frame" x="20" y="120" width="335" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    أسم المنتج" textAlignment="right" minimumFontSize="17" background="    التصنيف " translatesAutoresizingMaskIntoConstraints="NO" id="SjZ-OQ-ENE">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="l9P-vL-nBj"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaO-l8-qua">
+                                        <rect key="frame" x="0.0" y="52" width="335" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="vVW-YF-olJ"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة صورة">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY6-j1-Gm5">
+                                        <rect key="frame" x="0.0" y="104" width="335" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="sj3-ru-Ryh"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة قسم جديد">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addProduct:" destination="3SL-OQ-Q2E" eventType="touchUpInside" id="tBQ-mH-36E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.95433454949999996" green="0.95433454949999996" blue="0.95433454949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B6Y-Jy-IBP" firstAttribute="trailing" secondItem="YGx-zk-Wgz" secondAttribute="trailing" constant="20" id="0VA-m7-v38"/>
+                            <constraint firstItem="YGx-zk-Wgz" firstAttribute="leading" secondItem="B6Y-Jy-IBP" secondAttribute="leading" constant="20" id="SZM-8q-T5h"/>
+                            <constraint firstItem="YGx-zk-Wgz" firstAttribute="top" secondItem="B6Y-Jy-IBP" secondAttribute="top" constant="100" id="gsB-ZX-dUH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B6Y-Jy-IBP"/>
                     </view>
                     <navigationItem key="navigationItem" id="eXx-L9-1Xa"/>
+                    <connections>
+                        <outlet property="addSection" destination="nY6-j1-Gm5" id="wub-Dx-E0c"/>
+                        <outlet property="image" destination="eaO-l8-qua" id="6OG-6d-VF7"/>
+                        <outlet property="name" destination="SjZ-OQ-ENE" id="Sj9-3V-Sl5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8X-hn-17F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
