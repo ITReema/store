@@ -82,6 +82,7 @@
 		4F0DCABC22EB460A0084869F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4FA608CE22ECB54100CE8394 /* HomeViewController.swift */,
 				4F58C68622EC8CB700BF6AD8 /* Product Mangement */,
 				4F27B27222EB7CFF0098183B /* LoginController */,
 				4F27B27322EB7D260098183B /* SettingsController */,
@@ -92,7 +93,6 @@
 				4F0DCABD22EB460A0084869F /* AppDelegate.swift */,
 				4F0DCAC922EB460E0084869F /* Info.plist */,
 				4F27B2A822EBB5E00098183B /* logo.png */,
-				4FA608CE22ECB54100CE8394 /* HomeViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

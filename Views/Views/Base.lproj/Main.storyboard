@@ -144,25 +144,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zK8-OB-ScK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
-                            </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oGW-GC-BcE">
-                                <rect key="frame" x="168" y="188" width="39" height="37"/>
+                                <rect key="frame" x="157" y="189" width="60" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="zK8-OB-ScK">
+                                <rect key="frame" x="16" y="48" width="343" height="178"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zK8-OB-ScK" firstAttribute="top" secondItem="3kz-3y-fWb" secondAttribute="top" id="26t-W4-qSX"/>
-                            <constraint firstItem="oGW-GC-BcE" firstAttribute="leading" secondItem="wAu-HT-b3n" secondAttribute="leading" constant="168" id="8jx-6q-X4A"/>
-                            <constraint firstItem="zK8-OB-ScK" firstAttribute="leading" secondItem="3kz-3y-fWb" secondAttribute="leading" id="9QV-MQ-6O3"/>
-                            <constraint firstAttribute="trailing" secondItem="oGW-GC-BcE" secondAttribute="trailing" constant="168" id="G7r-yC-53w"/>
-                            <constraint firstItem="3kz-3y-fWb" firstAttribute="bottom" secondItem="zK8-OB-ScK" secondAttribute="bottom" constant="398" id="bqk-19-N2j"/>
-                            <constraint firstItem="oGW-GC-BcE" firstAttribute="top" secondItem="wAu-HT-b3n" secondAttribute="top" constant="188" id="dZx-3w-bJc"/>
-                            <constraint firstAttribute="bottom" secondItem="oGW-GC-BcE" secondAttribute="bottom" constant="442" id="gTH-ZV-Enc"/>
-                            <constraint firstItem="zK8-OB-ScK" firstAttribute="trailing" secondItem="3kz-3y-fWb" secondAttribute="trailing" id="t0t-PZ-AdT"/>
+                            <constraint firstItem="3kz-3y-fWb" firstAttribute="trailing" secondItem="oGW-GC-BcE" secondAttribute="trailing" constant="158" id="7Bl-vJ-XFf"/>
+                            <constraint firstItem="zK8-OB-ScK" firstAttribute="top" secondItem="3kz-3y-fWb" secondAttribute="top" constant="28" id="EL6-aJ-ZKg"/>
+                            <constraint firstItem="3kz-3y-fWb" firstAttribute="bottom" secondItem="oGW-GC-BcE" secondAttribute="bottom" constant="392" id="LBh-Fe-j6e"/>
+                            <constraint firstItem="zK8-OB-ScK" firstAttribute="leading" secondItem="3kz-3y-fWb" secondAttribute="leading" constant="16" id="Ows-jL-wpY"/>
+                            <constraint firstItem="3kz-3y-fWb" firstAttribute="bottom" secondItem="zK8-OB-ScK" secondAttribute="bottom" constant="392" id="ZSH-xk-Az6"/>
+                            <constraint firstItem="zK8-OB-ScK" firstAttribute="trailing" secondItem="3kz-3y-fWb" secondAttribute="trailing" constant="-16" id="h9y-OX-A3N"/>
+                            <constraint firstItem="oGW-GC-BcE" firstAttribute="top" secondItem="3kz-3y-fWb" secondAttribute="top" constant="169" id="uga-wq-ED5"/>
+                            <constraint firstItem="oGW-GC-BcE" firstAttribute="leading" secondItem="3kz-3y-fWb" secondAttribute="leading" constant="157" id="wA7-6y-yp4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3kz-3y-fWb"/>
                     </view>
