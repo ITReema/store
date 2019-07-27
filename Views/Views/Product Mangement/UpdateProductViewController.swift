@@ -9,13 +9,17 @@
 import UIKit
 
 class UpdateProductViewController: UIViewController {
-
+    @IBOutlet var name: UITextField!
+    @IBOutlet var update: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func updateButton(_ sender: Any) {
+        
+        
     }
     
-
-
 }
