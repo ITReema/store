@@ -8,23 +8,32 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIScrollViewDelegate{
 
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var pageControl: UIPageControl!
+    
+    var images = ["0","1","2","3"]
+    var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        pageControl.numberOfPages = images.count
+        for index in 0..<images.count{
+            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
+            frame.size = scrollView.frame.size
+            
+            let imageView = UIImageView(frame: frame)
+            imageView.image = UIImage(named: images[index])
+            self.scrollView.addSubview(imageView)
+        }
+        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width*CGFloat(images.count)), height: scrollView.frame.size.height)
+        
+        scrollView.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
+        pageControl.currentPage = Int(pageNumber)
     }
-    */
-
+    
 }
