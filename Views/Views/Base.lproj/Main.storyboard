@@ -302,14 +302,94 @@
                     <view key="view" contentMode="scaleToFill" id="7nR-Eh-D37">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hmJ-b9-hOT">
+                                <rect key="frame" x="20" y="100" width="335" height="476"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    أسم المنتج" textAlignment="right" minimumFontSize="17" background="    التصنيف " translatesAutoresizingMaskIntoConstraints="NO" id="TCg-tB-UIt">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="X40-y6-tPa"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    التصنيف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhI-qX-IRV">
+                                        <rect key="frame" x="0.0" y="52" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MBF-ut-zM0"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    السعر" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAk-Xi-X9b">
+                                        <rect key="frame" x="0.0" y="104" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="24L-Q5-ciD"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNS-IN-94N">
+                                        <rect key="frame" x="0.0" y="156" width="335" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JFc-VP-VG7"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة صورة المنتج">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="AddImageButton:" destination="3SL-OQ-Q2E" eventType="touchUpInside" id="EUu-GI-tKu"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-9u-vjS">
+                                        <rect key="frame" x="0.0" y="208" width="335" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="3SL-OQ-Q2E" id="UsB-6H-bx2"/>
+                                            <outlet property="delegate" destination="3SL-OQ-Q2E" id="rfJ-nR-O4h"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW3-k1-8EL">
+                                        <rect key="frame" x="0.0" y="436" width="335" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6v0-0l-2LK"/>
+                                        </constraints>
+                                        <state key="normal" title="إضافة المنتج ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addProduct:" destination="3SL-OQ-Q2E" eventType="touchUpInside" id="cg6-ul-NPA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.95433454949999996" green="0.95433454949999996" blue="0.95433454949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hmJ-b9-hOT" firstAttribute="leading" secondItem="h0Q-sn-Oei" secondAttribute="leading" constant="20" id="Khe-uy-4K6"/>
+                            <constraint firstItem="hmJ-b9-hOT" firstAttribute="top" secondItem="h0Q-sn-Oei" secondAttribute="top" constant="80" id="nbe-VY-kBS"/>
+                            <constraint firstItem="h0Q-sn-Oei" firstAttribute="trailing" secondItem="hmJ-b9-hOT" secondAttribute="trailing" constant="20" id="y6W-um-t48"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h0Q-sn-Oei"/>
                     </view>
                     <navigationItem key="navigationItem" id="JfD-cY-dmF"/>
+                    <connections>
+                        <outlet property="addProduct" destination="FW3-k1-8EL" id="f6L-l0-Xak"/>
+                        <outlet property="category" destination="vhI-qX-IRV" id="3C1-co-bLQ"/>
+                        <outlet property="image" destination="pNS-IN-94N" id="GxW-ul-J29"/>
+                        <outlet property="name" destination="TCg-tB-UIt" id="Z6o-zl-4OM"/>
+                        <outlet property="pickerView" destination="cAm-9u-vjS" id="MKh-dK-v1g"/>
+                        <outlet property="price" destination="UAk-Xi-X9b" id="KeG-oj-YO7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWc-67-Rg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2407" y="3197"/>
+            <point key="canvasLocation" x="-2407.1999999999998" y="3196.5517241379312"/>
         </scene>
         <!--CodeConfirm-->
         <scene sceneID="OVp-4K-E6a">
@@ -574,10 +654,88 @@
                     <view key="view" contentMode="scaleToFill" id="P25-wl-lY0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9e2-tB-fzP">
+                                <rect key="frame" x="20" y="207" width="335" height="221"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-NG-Z52">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oo1-zr-dsq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="    إضافة منتج">
+                                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButton:" destination="p6s-Y0-n91" eventType="touchUpInside" id="HxK-gw-ZWU"/>
+                                            <action selector="shareButton:" destination="lnT-nA-bhK" eventType="touchUpInside" id="ksg-mn-SOg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ2-uK-gvv">
+                                        <rect key="frame" x="0.0" y="57" width="335" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9EJ-6v-gjY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="    إضافة قسم ">
+                                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addSectionButton:" destination="p6s-Y0-n91" eventType="touchUpInside" id="Ww6-KO-i6l"/>
+                                            <action selector="serviceButton:" destination="lnT-nA-bhK" eventType="touchUpInside" id="Twc-Yc-7fG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vo-R8-qyK">
+                                        <rect key="frame" x="0.0" y="114" width="335" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="h2o-1T-bb8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="    تعديل منتج">
+                                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="contactButton:" destination="lnT-nA-bhK" eventType="touchUpInside" id="caw-rE-DcX"/>
+                                            <action selector="updateButton:" destination="p6s-Y0-n91" eventType="touchUpInside" id="dfR-Zh-wfO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mav-NH-vCJ">
+                                        <rect key="frame" x="0.0" y="171" width="335" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6Zc-eP-FQ5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="    حذف منتج">
+                                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="contactButton:" destination="lnT-nA-bhK" eventType="touchUpInside" id="yHb-8G-iJY"/>
+                                            <action selector="deleteButton:" destination="p6s-Y0-n91" eventType="touchUpInside" id="n0G-jx-hlz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.95433454949999996" green="0.95433454949999996" blue="0.95433454949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mhP-3x-amh" firstAttribute="trailing" secondItem="9e2-tB-fzP" secondAttribute="trailing" constant="20" id="XAI-j8-NLq"/>
+                            <constraint firstItem="9e2-tB-fzP" firstAttribute="top" secondItem="mhP-3x-amh" secondAttribute="top" constant="187" id="Zat-Tc-WK4"/>
+                            <constraint firstItem="9e2-tB-fzP" firstAttribute="leading" secondItem="mhP-3x-amh" secondAttribute="leading" constant="20" id="xOc-2G-3UE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mhP-3x-amh"/>
                     </view>
                     <navigationItem key="navigationItem" id="yAN-XS-dcy"/>
+                    <connections>
+                        <outlet property="addProduct" destination="SEB-NG-Z52" id="xlQ-a6-0cr"/>
+                        <outlet property="addSection" destination="YZ2-uK-gvv" id="Czz-n5-bEf"/>
+                        <outlet property="delete" destination="Mav-NH-vCJ" id="JGE-08-f3H"/>
+                        <outlet property="update" destination="1vo-R8-qyK" id="e7u-bJ-8lu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7I-iK-SZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -756,8 +914,25 @@
             </objects>
             <point key="canvasLocation" x="-3482" y="2445"/>
         </scene>
+        <!--Add Section View Controller-->
+        <scene sceneID="vXL-11-Qt2">
+            <objects>
+                <viewController storyboardIdentifier="AddSection" id="gP1-VP-T9f" customClass="AddSectionViewController" customModule="Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7um-Pd-Oo1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95433454949999996" green="0.95433454949999996" blue="0.95433454949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="B6Y-Jy-IBP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eXx-L9-1Xa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8X-hn-17F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2407" y="5567"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="    التصنيف " width="16" height="16"/>
         <image name="Aldekhel_logo" width="1116" height="208"/>
         <image name="account" width="24" height="24"/>
         <image name="add" width="24" height="24"/>

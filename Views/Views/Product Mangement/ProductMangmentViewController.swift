@@ -16,6 +16,10 @@ class ProductMangmentViewController: UIViewController {
     var pwd = "00000"
     var nameAdmin = "Admin"
     
+    @IBOutlet var addProduct: UIButton!
+    @IBOutlet var addSection: UIButton!
+    @IBOutlet var update: UIButton!
+    @IBOutlet var delete: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -41,4 +45,36 @@ class ProductMangmentViewController: UIViewController {
         }
     }
 }
+    
+    
+    @IBAction func addButton(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Add")
+            else {return}
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func addSectionButton(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "AddSection")
+            else {return}
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func updateButton(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Update")
+            else {return}
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Delete")
+            else {return}
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
+    
+    
+    
+    
 }
